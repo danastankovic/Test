@@ -1,0 +1,273 @@
+*{
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html,
+body,
+button
+{
+    font-family: 'Montserrat', sans-serif;
+    color: #4A4A4A;
+}
+button:focus{
+    outline: none!important;
+}
+.wrap__header{
+    padding: 15px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    -webkit-box-shadow: 0 0 10px 0 rgba(0,0,0,0.12);
+            box-shadow: 0 0 10px 0 rgba(0,0,0,0.12);
+}
+.wrap__button{
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    margin: 0 15px;
+        -webkit-transition: all .6s ease;
+        	transition:all .6s ease;
+}
+.wrap__button--active{
+    color: #008ea0;
+}
+.wrap__button:hover{
+    color:#008ea0 ;
+}
+.wrap__content{
+   position: relative;
+   width: 30%;
+   margin: 30px auto 0;
+   text-align: center;
+}
+.wrap__input{
+            display: none;
+}
+.wrap__input--active{
+   display: block;
+}
+
+#content__form{
+    text-align: left;
+   
+}
+fieldset {
+	border: medium none !important;
+	margin: 0 0 10px;
+	min-width: 100%;
+	padding: 0;
+	width: 100%;
+}
+input[type="text"]{
+    width: 100%;
+    border: 1px solid #CCC;
+    background: #FFF;
+   margin-top: 5px;
+    padding: 10px;
+    border-radius: 2px;
+}
+label{
+    font-size: 14px;
+    cursor: pointer;
+}
+::-webkit-input-placeholder {
+    color:#888;
+   }
+   :-moz-placeholder {
+    color:#888;
+   }
+   ::-moz-placeholder {
+    color:#888;
+   }
+   :-ms-input-placeholder {
+    color:#888;
+   }
+input[type="text"]:hover{
+	-webkit-transition:border-color 0.3s ease-in-out;
+	-moz-transition:border-color 0.3s ease-in-out;
+	transition:border-color 0.3s ease-in-out;
+	border:1px solid #008ea0;
+}
+input[type="text"]:focus{
+	outline:0;
+	border:1px solid #008ea0;
+}
+
+
+/* STYLE FOR RADIO AND CHECKBOX BTN */
+[type="radio"]:checked,
+[type="checkbox"]:checked,
+[type="radio"]:not(:checked),
+[type="checkbox"]:not(:checked) {
+    position: absolute;
+    left: -9999px;
+}
+[type="radio"]:checked + label,
+[type="radio"]:not(:checked) + label,
+[type="checkbox"]:checked + label,
+[type="checkbox"]:not(:checked) + label
+{
+    position: relative;
+    padding-left: 28px;
+    cursor: pointer;
+    line-height: 20px;
+    display: inline-block;
+}
+[type="radio"]:checked + label:before,
+[type="radio"]:not(:checked) + label:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 18px;
+    height: 18px;
+    border: 1px solid #CCC;
+    border-radius: 100%;
+    background: #fff;
+}
+[type="radio"]:checked + label:after,
+[type="radio"]:not(:checked) + label:after {
+    content: '';
+    width: 12px;
+    height: 12px;
+    background: #008ea0;
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    border-radius: 100%;
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+[type="checkbox"]:checked + label:before,
+[type="checkbox"]:not(:checked) + label:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 18px;
+    height: 18px;
+    border: 1px solid #CCC;
+    background: #fff;
+}
+[type="checkbox"]:checked + label:after,
+[type="checkbox"]:not(:checked) + label:after {
+    content: '';
+    background-image: url('../img/checkmark.svg');
+    position: absolute;
+    top: 0px;
+    opacity: 1;
+    left: 0px;
+    border-radius: 2px;
+     text-align: center;
+     width: 100%;
+     height: 100%;
+     background-size: 17px;
+     background-repeat: no-repeat;
+     background-position: 1px 1px;
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+[type="radio"]:not(:checked) + label:after,
+[type="checkbox"]:not(:checked) + label:after {
+    opacity: 0;
+    -webkit-transform: scale(0);
+    transform: scale(0);
+}
+[type="radio"]:checked + label:after,
+[type="checkbox"]:checked + label:after {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+}
+
+
+.btn__submit{
+    width: 100%;
+    height: 35px;
+    margin-top: 20px;
+    color: #fff;
+    font-weight: 500;
+    text-transform: uppercase;
+  border:1px solid  #008ea0;
+  background-color: #008ea0;
+  -webkit-transition: all .6s ease;
+  transition:all .6s ease;
+  border-radius: 2px;
+  cursor: pointer;
+}
+.btn__submit:hover{
+    background-color: #0078a0;
+}
+.error__msg{
+    color: red;;
+}
+
+
+/* SPINNER */
+
+#loading__spinner {
+    display: inline;
+    position: relative;
+    z-index: 999999;
+    display: none;
+  }
+  
+  #loading__spinner .loading__spinner--icon {
+    margin: auto;
+    width: 80px;
+    height: 80px;
+  
+    border: solid 3px transparent;
+    border-top-color:  #008ea0;
+    border-left-color: #008ea0;
+    border-radius: 80px;
+  
+    -webkit-animation: loading-spinner 500ms linear infinite;
+    -moz-animation:    loading-spinner 500ms linear infinite;
+    -ms-animation:     loading-spinner 500ms linear infinite;
+    -o-animation:      loading-spinner 500ms linear infinite;
+    animation:         loading-spinner 500ms linear infinite;
+  }
+  
+  @-webkit-keyframes loading-spinner {
+    0%   { -webkit-transform: rotate(0deg);   transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); transform: rotate(360deg); }
+  }
+  
+  @-moz-keyframes loading-spinner {
+    0%   { -moz-transform: rotate(0deg);   transform: rotate(0deg); }
+    100% { -moz-transform: rotate(360deg); transform: rotate(360deg); }
+  }
+  
+  @-o-keyframes loading-spinner {
+    0%   { -o-transform: rotate(0deg);   transform: rotate(0deg); }
+    100% { -o-transform: rotate(360deg); transform: rotate(360deg); }
+  }
+  
+  @-ms-keyframes loading-spinner {
+    0%   { -ms-transform: rotate(0deg);   transform: rotate(0deg); }
+    100% { -ms-transform: rotate(360deg); transform: rotate(360deg); }
+  }
+  
+  @keyframes loading-spinner {
+    0%   { transform: rotate(0deg);   transform: rotate(0deg); }
+    100% { transform: rotate(360deg); transform: rotate(360deg); }
+  }
+
+
+
+  @media only screen and (max-width: 1024px) {
+    .wrap__content{
+        width: 100%;
+        padding: 0 15px;
+     }
+  }

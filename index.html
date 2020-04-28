@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <!-- meta tag -->
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <!-- css -->
+      <link rel="stylesheet" href="./assets/css/style.css">
+      <!-- font -->
+      <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;900&display=swap" rel="stylesheet" />
+      <title>Document</title>
+   </head>
+   <body>
+      <div class="wrapper">
+         <div class="wrap__header">
+            <button class="wrap__button wrap__button--active" data-for-input="1">Mobile number</button>
+            <button class="wrap__button" data-for-input="2">Email address</button>
+         </div>
+         <div class="wrap__content">
+            <form action="" method="get" id="content__form">
+               <fieldset class="wrap__input wrap__input--mobile wrap__input--active " data-input="1">
+                  <label for="">Mobile Number:</label>
+                  <input type="text" name="mobile" id="mobile__input">
+              
+               </fieldset>
+               <fieldset  class="wrap__input wrap__input--email" data-input="2">
+                  <label for="email">Email:</label>
+                  <input type="text" name="email"  id="email__input">
+               </fieldset>
+               <fieldset>
+                  <input type="radio" id="eur" name="radio-group" >
+                  <label for="eur">EUR</label>
+                  <input type="radio" id="usd" name="radio-group">
+                  <label for="usd">USD</label>
+               </fieldset>
+               <fieldset>
+                  <input type="checkbox" id="terms" class="checkbox__custom"/>
+                  <label for="terms">Terms and conditions</label>
+               </fieldset>
+               <fieldset>
+                  <input type="checkbox" id="promo" class="checkbox__custom" />
+                  <label for="promo">Promo notifications</label>
+               </fieldset>
+               <div class="btn">
+                  <button class="btn__submit">
+                  Submit
+                  </button>
+               </div>
+            </form>
+           
+          
+         </div>
+       <div id="loading__spinner">
+        <div class="loading__spinner--icon"></div>
+     </div>
+      </div>
+      <!-- script  -->
+      <script src="./assets/js/script.js" ></script>
+   </body>
+</html>
